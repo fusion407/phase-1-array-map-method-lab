@@ -12,5 +12,9 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map(words => {
+    return words.replace(/(?:^|\s)\S/g, function(e) { return e.toUpperCase(); });
+  });
 }
+console.log(tutorials)
+console.log(titleCased());
